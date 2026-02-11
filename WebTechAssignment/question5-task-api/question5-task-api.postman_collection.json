@@ -1,0 +1,203 @@
+{
+    "info": {
+        "_postman_id": "q5q5q5q5-q5q5-q5q5-q5q5-q5q5q5q5q5q5",
+        "name": "question5-task-api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Tasks",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8084/api/tasks",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8084",
+                    "path": [
+                        "api",
+                        "tasks"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Task By ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8084/api/tasks/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8084",
+                    "path": [
+                        "api",
+                        "tasks",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Tasks by Status",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8084/api/tasks/status?completed=false",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8084",
+                    "path": [
+                        "api",
+                        "tasks",
+                        "status"
+                    ],
+                    "query": [
+                        {
+                            "key": "completed",
+                            "value": "false"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Tasks by Priority",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8084/api/tasks/priority/HIGH",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8084",
+                    "path": [
+                        "api",
+                        "tasks",
+                        "priority",
+                        "HIGH"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create Task",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"title\": \"New Task\",\n    \"description\": \"Description of new task\",\n    \"completed\": false,\n    \"priority\": \"MEDIUM\",\n    \"dueDate\": \"2026-03-01\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8084/api/tasks",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8084",
+                    "path": [
+                        "api",
+                        "tasks"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Task",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"title\": \"Updated Task\",\n    \"description\": \"Updated description\",\n    \"completed\": false,\n    \"priority\": \"HIGH\",\n    \"dueDate\": \"2026-03-05\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8084/api/tasks/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8084",
+                    "path": [
+                        "api",
+                        "tasks",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Mark Task Complete",
+            "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8084/api/tasks/1/complete",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8084",
+                    "path": [
+                        "api",
+                        "tasks",
+                        "1",
+                        "complete"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Task",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8084/api/tasks/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8084",
+                    "path": [
+                        "api",
+                        "tasks",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

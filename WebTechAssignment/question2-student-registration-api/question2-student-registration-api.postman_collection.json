@@ -1,0 +1,160 @@
+{
+    "info": {
+        "_postman_id": "q2q2q2q2-q2q2-q2q2-q2q2-q2q2q2q2q2q2",
+        "name": "question2-student-registration-api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Students",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8081/api/students",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "students"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Student By ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8081/api/students/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "students",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Students by Major",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8081/api/students/major/Computer Science",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "students",
+                        "major",
+                        "Computer Science"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Filter by GPA",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8081/api/students/filter?gpa=3.5",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "students",
+                        "filter"
+                    ],
+                    "query": [
+                        {
+                            "key": "gpa",
+                            "value": "3.5"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Register Student",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"firstName\": \"New\",\n    \"lastName\": \"Student\",\n    \"email\": \"new.student@email.com\",\n    \"major\": \"Physics\",\n    \"gpa\": 3.7\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8081/api/students",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "students"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Student",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"firstName\": \"Updated\",\n    \"lastName\": \"Student\",\n    \"email\": \"updated.student@email.com\",\n    \"major\": \"Physics\",\n    \"gpa\": 3.9\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8081/api/students/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8081",
+                    "path": [
+                        "api",
+                        "students",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
